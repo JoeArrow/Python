@@ -8,10 +8,8 @@ where n denotes the length of the given sequence.
 
 from __future__ import annotations
 
-
 def generate_all_permutations(sequence: list[int | str]) -> None:
     create_state_space_tree(sequence, [], 0, [0 for i in range(len(sequence))])
-
 
 def create_state_space_tree(
     sequence: list[int | str],
@@ -36,7 +34,6 @@ def create_state_space_tree(
             create_state_space_tree(sequence, current_sequence, index + 1, index_used)
             current_sequence.pop()
             index_used[i] = False
-
 
 """
 remove the comment to take an input from the user

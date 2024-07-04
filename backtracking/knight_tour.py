@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-
 def get_valid_pos(position: tuple[int, int], n: int) -> list[tuple[int, int]]:
     """
     Find all the valid positions a knight can move to from the current position.
@@ -22,6 +21,7 @@ def get_valid_pos(position: tuple[int, int], n: int) -> list[tuple[int, int]]:
         (y - 2, x + 1),
         (y - 2, x - 1),
     ]
+
     permissible_positions = []
 
     for position in positions:
@@ -93,7 +93,6 @@ def open_knight_tour(n: int) -> list[list[int]]:
 
     msg = f"Open Knight Tour cannot be performed on a board of size {n}"
     raise ValueError(msg)
-
 
 if __name__ == "__main__":
     import doctest
